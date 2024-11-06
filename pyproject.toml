@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "dimensionamiento-motor"
+version = "0.1.0"
+description = ""
+authors = ["raulest50 <raulest50@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyfoam = "^2023.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

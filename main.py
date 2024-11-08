@@ -21,9 +21,19 @@ from math import pi
 rotational_speed_rev_s = rotational_speed_rpm / 60.0  # rev/s
 rotational_speed_rad_s = rotational_speed_rev_s * 2 * pi  # rad/s
 
+# Define case directory
 case_dir = "mixingSimulation"
+
+# Create main case directory if it doesn't exist
 if not os.path.exists(case_dir):
     os.makedirs(case_dir)
+
+# Create required subdirectories
+required_dirs = ["system", "constant", "0", os.path.join("constant", "triSurface")]
+for dir_name in required_dirs:
+    dir_path = os.path.join(case_dir, dir_name)
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
 
 
 
